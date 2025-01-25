@@ -26,25 +26,27 @@ class _CustomDrawerState extends State<CustomDrawer> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          const Infolistile(
-            image: Assets.imagesFace2,
-            Title: 'Ahmed Ehab',
-            SubTitle: 'hobaa24@gmail.com',
+      child: CustomScrollView(
+        slivers: [
+          const SliverToBoxAdapter(
+            child: Infolistile(
+              image: Assets.imagesFace2,
+              Title: 'Ahmed Ehab',
+              SubTitle: 'hobaa24@gmail.com',
+            ),
           ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
+          SliverList.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
                   if (activeIndex != index) {
-                    setState(() {
-                      activeIndex = index;
-                      print(activeIndex);
-                    });
+                    setState(
+                      () {
+                        activeIndex = index;
+                        print(activeIndex);
+                      },
+                    );
                   }
                 },
                 child: Padding(
@@ -57,18 +59,25 @@ class _CustomDrawerState extends State<CustomDrawer> {
               );
             },
           ),
-          Expanded(child: SizedBox()),
-          const inActiveitem(
-            draweritemmodel: Draweritemmodel(
-                image: Assets.imagesSetting, title: 'Setting system'),
+          const SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                inActiveitem(
+                  draweritemmodel: Draweritemmodel(
+                      image: Assets.imagesSetting, title: 'Setting system'),
+                ),
+                inActiveitem(
+                  draweritemmodel: Draweritemmodel(
+                      image: Assets.imagesLogout, title: 'Logout account'),
+                ),
+                SizedBox(
+                  height: 48,
+                )
+              ],
+            ),
           ),
-          const inActiveitem(
-            draweritemmodel: Draweritemmodel(
-                image: Assets.imagesLogout, title: 'Logout account'),
-          ),
-          SizedBox(
-            height: 48,
-          )
         ],
       ),
     );
