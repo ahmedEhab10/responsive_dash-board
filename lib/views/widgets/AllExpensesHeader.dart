@@ -11,7 +11,7 @@ class AllExpensesHeader extends StatelessWidget {
         const Text(
           'All Expenses',
           style: TextStyle(
-            color: const Color(0xFF064061),
+            color: Color(0xFF064061),
             fontSize: 16,
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.w700,
