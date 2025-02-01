@@ -30,7 +30,7 @@ class inActiveAllExoensesitem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -49,7 +49,7 @@ class inActiveAllExoensesitem extends StatelessWidget {
             iconcolor: Color(0xFF4EB7F2),
           ),
           const SizedBox(
-            height: 32,
+            height: 24,
           ),
           Text(
             allexpensesitemmodel.tital,
@@ -61,7 +61,7 @@ class inActiveAllExoensesitem extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 16,
+            height: 12,
           ),
           Text(
             allexpensesitemmodel.Date,
@@ -73,7 +73,7 @@ class inActiveAllExoensesitem extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 8,
+            height: 6,
           ),
           Text(
             allexpensesitemmodel.price,
@@ -101,7 +101,7 @@ class ActiveAllExoensesitem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       decoration: ShapeDecoration(
         color: Color(0xFFF4EB7F2),
         shape: RoundedRectangleBorder(
@@ -119,7 +119,7 @@ class ActiveAllExoensesitem extends StatelessWidget {
             color: Color(0xFFFFFFF),
           ),
           const SizedBox(
-            height: 32,
+            height: 24,
           ),
           Text(
             allexpensesitemmodel.tital,
@@ -131,7 +131,7 @@ class ActiveAllExoensesitem extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 16,
+            height: 8,
           ),
           Text(
             allexpensesitemmodel.Date,

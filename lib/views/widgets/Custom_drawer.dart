@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/Models/DraweritemModel.dart';
+import 'package:responsive_dash_board/Models/user_info_Model.dart';
 import 'package:responsive_dash_board/Utils/App_Images.dart';
 import 'package:responsive_dash_board/views/widgets/Infolistile.dart';
 import 'package:responsive_dash_board/views/widgets/drawer_item.dart';
@@ -28,11 +29,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Infolistile(
-              image: Assets.imagesFace2,
-              Title: 'Ahmed Ehab',
-              SubTitle: 'hobaa24@gmail.com',
+              userInfoModel: UserInfoModel(
+                  image: Assets.imagesFace2,
+                  title: 'Ahmed Ehab',
+                  subtitle: 'hobaa24@gmail.com'),
             ),
           ),
           SliverList.builder(
