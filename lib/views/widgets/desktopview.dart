@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/views/widgets/All_Expenses.dart';
 import 'package:responsive_dash_board/views/widgets/Custom_drawer.dart';
-import 'package:responsive_dash_board/views/widgets/Custom_packground_container.dart';
-import 'package:responsive_dash_board/views/widgets/Quick_Invoice.dart';
+import 'package:responsive_dash_board/views/widgets/My_Card_Section.dart';
 import 'package:responsive_dash_board/views/widgets/middle_Section.dart';
 
 class Desktopview extends StatelessWidget {
@@ -21,6 +19,10 @@ class Desktopview extends StatelessWidget {
             flex: 2,
             child: middle_section(),
           ),
+          SizedBox(
+            width: 16,
+          ),
+          Expanded(child: MyCardSection())
         ],
       ),
     );
