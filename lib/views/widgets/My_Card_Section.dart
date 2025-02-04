@@ -33,7 +33,7 @@ class _MyCardSectionState extends State<MyCardSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
-          height: 20,
+          height: 15,
         ),
         const Text(
           'My Card',
@@ -45,13 +45,13 @@ class _MyCardSectionState extends State<MyCardSection> {
           ),
         ),
         const SizedBox(
-          height: 20,
+          height: 15,
         ),
         MyCardPageview(
           pageController: pageController,
         ),
         const SizedBox(
-          height: 20,
+          height: 15,
         ),
         DotsIndecators(
           currentIndex: currentpageindex,

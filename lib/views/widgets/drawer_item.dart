@@ -30,13 +30,17 @@ class inActiveitem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(draweritemmodel.image),
-      title: Text(
-        draweritemmodel.title,
-        style: const TextStyle(
-          color: Color(0xFF064060),
-          fontSize: 16,
-          fontFamily: 'Montserrat',
-          fontWeight: FontWeight.w400,
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          draweritemmodel.title,
+          style: const TextStyle(
+            color: Color(0xFF064060),
+            fontSize: 16,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ),
     );
@@ -55,13 +59,17 @@ class Activeitem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(draweritemmodel.image),
-      title: Text(
-        draweritemmodel.title,
-        style: const TextStyle(
-          color: const Color(0xFF4EB7F2),
-          fontSize: 16,
-          fontFamily: 'Montserrat',
-          fontWeight: FontWeight.w700,
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          draweritemmodel.title,
+          style: const TextStyle(
+            color: const Color(0xFF4EB7F2),
+            fontSize: 16,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
       trailing: Container(

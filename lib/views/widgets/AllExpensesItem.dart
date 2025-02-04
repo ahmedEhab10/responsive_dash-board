@@ -51,37 +51,46 @@ class inActiveAllExoensesitem extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          Text(
-            allexpensesitemmodel.tital,
-            style: const TextStyle(
-              color: Color(0xFF064061),
-              fontSize: 16,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.tital,
+              style: const TextStyle(
+                color: Color(0xFF064061),
+                fontSize: 16,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
           const SizedBox(
             height: 12,
           ),
-          Text(
-            allexpensesitemmodel.Date,
-            style: const TextStyle(
-              color: Color(0xFFAAAAAA),
-              fontSize: 14,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w400,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.Date,
+              style: const TextStyle(
+                color: Color(0xFFAAAAAA),
+                fontSize: 14,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
           const SizedBox(
             height: 6,
           ),
-          Text(
-            allexpensesitemmodel.price,
-            style: const TextStyle(
-              color: Color(0xFF4EB7F2),
-              fontSize: 24,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.price,
+              style: const TextStyle(
+                color: Color(0xFF4EB7F2),
+                fontSize: 24,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600,
+              ),
             ),
           )
         ],
@@ -121,37 +130,46 @@ class ActiveAllExoensesitem extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          Text(
-            allexpensesitemmodel.tital,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.tital,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allexpensesitemmodel.Date,
-            style: const TextStyle(
-              color: Color(0xFFFAFAFA),
-              fontSize: 14,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w400,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.Date,
+              style: const TextStyle(
+                color: Color(0xFFFAFAFA),
+                fontSize: 14,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allexpensesitemmodel.price,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allexpensesitemmodel.price,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600,
+              ),
             ),
           )
         ],
@@ -171,16 +189,25 @@ class AllexpensesitemHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          padding: EdgeInsets.all(14),
-          decoration: ShapeDecoration(
-            shape: const OvalBorder(),
-            color: color,
-          ),
-          child: SvgPicture.asset(
-            image,
-            colorFilter:
-                ColorFilter.mode(iconcolor ?? Colors.white, BlendMode.srcIn),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  shape: const OvalBorder(),
+                  color: color,
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(
+                        iconcolor ?? Colors.white, BlendMode.srcIn),
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
         Transform.rotate(

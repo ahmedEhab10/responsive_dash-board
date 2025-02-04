@@ -9,7 +9,7 @@ class middle_section extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.only(left: 20.0),
       child: Column(
         children: [
